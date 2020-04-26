@@ -6,15 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | 三千的博客</title>
+  <title>带隐藏功能的播放器菜单 | 三千的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="三千的博客">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="闲暇时间在网上看到了一个带隐藏功能的侧边导航栏，我于是突发奇想，改造一下，变成一个带隐藏功能的播放器菜单。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="带隐藏功能的播放器菜单">
+<meta property="og:url" content="http://yoursite.com/2020/04/26/%E5%B8%A6%E9%9A%90%E8%97%8F%E5%8A%9F%E8%83%BD%E7%9A%84%E6%92%AD%E6%94%BE%E5%99%A8%E8%8F%9C%E5%8D%95/index.html">
 <meta property="og:site_name" content="三千的博客">
+<meta property="og:description" content="闲暇时间在网上看到了一个带隐藏功能的侧边导航栏，我于是突发奇想，改造一下，变成一个带隐藏功能的播放器菜单。">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200426204621407.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0ODkyMTEx,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200426204713187.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0ODkyMTEx,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="article:published_time" content="2020-04-26T12:29:30.000Z">
+<meta property="article:modified_time" content="2020-04-26T12:51:07.577Z">
 <meta property="article:author" content="三千不可乐">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200426204621407.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0ODkyMTEx,size_16,color_FFFFFF,t_70#pic_center">
   
     <link rel="alternative" href="/atom.xml" title="三千的博客" type="application/atom+xml">
   
@@ -144,103 +151,177 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-带隐藏功能的播放器菜单" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      带隐藏功能的播放器菜单
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/26/%E5%B8%A6%E9%9A%90%E8%97%8F%E5%8A%9F%E8%83%BD%E7%9A%84%E6%92%AD%E6%94%BE%E5%99%A8%E8%8F%9C%E5%8D%95/" class="archive-article-date">
+
+        
+        <a href="/2020/04/26/%E5%B8%A6%E9%9A%90%E8%97%8F%E5%8A%9F%E8%83%BD%E7%9A%84%E6%92%AD%E6%94%BE%E5%99%A8%E8%8F%9C%E5%8D%95/" class="archive-article-date">
   	<time datetime="2020-04-26T12:29:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-26</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/26/%E5%B8%A6%E9%9A%90%E8%97%8F%E5%8A%9F%E8%83%BD%E7%9A%84%E6%92%AD%E6%94%BE%E5%99%A8%E8%8F%9C%E5%8D%95/">带隐藏功能的播放器菜单</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<p>闲暇时间在网上看到了一个带隐藏功能的侧边导航栏，我于是突发奇想，改造一下，变成一个带隐藏功能的播放器菜单。</p>
+<a id="more"></a>
 
-        <div class="article-info info-on-right">
-          
-          
+<hr>
+<p>主要用到了toggleClass()方法，其他的都是一些常见的属性，有些比较麻烦的我会在注释里说明。</p>
+<p>html文件代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">	&lt;head&gt;</span><br><span class="line">		&lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">		&lt;title&gt;音乐播放器&lt;&#x2F;title&gt;</span><br><span class="line">		&lt;link rel&#x3D;&quot;stylesheet&quot;type&#x3D;&quot;text&#x2F;css&quot;href&#x3D;&quot;musicstyle.css&quot;&#x2F;&gt;</span><br><span class="line">		&lt;script src&#x3D;&quot;jquery-3.4.1.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">	&lt;&#x2F;head&gt;</span><br><span class="line">	&lt;body&gt;</span><br><span class="line">		&lt;div class&#x3D;&quot;lk&quot;&gt;</span><br><span class="line">			</span><br><span class="line">			&lt;a class&#x3D;&quot;icon iconfont icon-xunhuan&quot;href&#x3D;&quot;#&quot;&gt;&lt;&#x2F;a&gt;</span><br><span class="line">			&lt;a class&#x3D;&quot;icon iconfont icon-kuaitui&quot;href&#x3D;&quot;#&quot;&gt;&lt;&#x2F;a&gt;</span><br><span class="line">			&lt;a class&#x3D;&quot;icon iconfont icon-bofang&quot;href&#x3D;&quot;#&quot;&gt;&lt;&#x2F;a&gt;</span><br><span class="line">			&lt;a class&#x3D;&quot;icon iconfont icon-zanting1&quot;href&#x3D;&quot;#&quot;&gt;&lt;&#x2F;a&gt;</span><br><span class="line">			&lt;a class&#x3D;&quot;icon iconfont icon-kuaijin&quot;href&#x3D;&quot;#&quot;&gt;&lt;&#x2F;a&gt;</span><br><span class="line">			&lt;a class&#x3D;&quot;icon iconfont icon-yinliang&quot;href&#x3D;&quot;#&quot;&gt;&lt;&#x2F;a&gt;</span><br><span class="line">			&lt;a class&#x3D;&quot;icon iconfont icon-jingyin&quot;href&#x3D;&quot;#&quot;&gt;&lt;&#x2F;a&gt;</span><br><span class="line">			</span><br><span class="line">		&lt;&#x2F;div&gt;</span><br><span class="line">		&lt;a class&#x3D;&quot;btn&quot;&gt;&lt;&#x2F;a&gt;</span><br><span class="line">		&lt;script type&#x3D;&quot;text&#x2F;javascript&quot;&gt;</span><br><span class="line">			&#x2F;*点击进行效果切换*&#x2F;</span><br><span class="line">			$(&quot;.btn&quot;).click(function()&#123;</span><br><span class="line">				&#x2F;*从菜单图标切换到叉号*&#x2F;</span><br><span class="line">				$(&quot;.btn&quot;).toggleClass(&quot;btnc&quot;);</span><br><span class="line">				&#x2F;*将side的样式加入lk中*&#x2F;</span><br><span class="line">				$(&quot;.lk&quot;).toggleClass(&quot;side&quot;);</span><br><span class="line">			&#125;);</span><br><span class="line">		&lt;&#x2F;script&gt;</span><br><span class="line">	&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+<p>CSS的代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line">@import url(&quot;http:&#x2F;&#x2F;at.alicdn.com&#x2F;t&#x2F;font_1782223_dig8fdj8r7c.css&quot;);</span><br><span class="line"></span><br><span class="line">body,html&#123;</span><br><span class="line">	margin: 0;</span><br><span class="line">	padding: 0;</span><br><span class="line">	height: 100%;</span><br><span class="line">	width: 100%;</span><br><span class="line">	font-family: sans-serif;</span><br><span class="line">	background:url(img&#x2F;bg.png);</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;*整体轮廓的样式*&#x2F;</span><br><span class="line">.lk&#123;</span><br><span class="line">	position: fixed;</span><br><span class="line">	bottom: 0;</span><br><span class="line">	background: #7f8c8d;</span><br><span class="line">	overflow: hidden;</span><br><span class="line">	height: 70px;</span><br><span class="line">	width: 100%;</span><br><span class="line">	margin-bottom:-100px;</span><br><span class="line">	text-align:center;</span><br><span class="line">	transition: 0.8s all;</span><br><span class="line">&#125;</span><br><span class="line">.side&#123;</span><br><span class="line">	margin-bottom: 0;</span><br><span class="line">&#125;</span><br><span class="line">.lk a&#123;</span><br><span class="line">	&#x2F;*取消下划线*&#x2F;</span><br><span class="line">	text-decoration: none;</span><br><span class="line">	color: white;</span><br><span class="line">	font-size: 50px;</span><br><span class="line">	line-height: 75px;</span><br><span class="line">	&#x2F;*将每一个a标签视为一个独立的块*&#x2F;</span><br><span class="line">	display:inline;</span><br><span class="line">	&#x2F;*设置一个过渡效果，0.5秒延展到全部*&#x2F;</span><br><span class="line">	transition: 0.5s all;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;*hover选择器，用来展现鼠标放置时的颜色*&#x2F;</span><br><span class="line">.lk a:hover&#123;</span><br><span class="line">	background: #95a5a6;</span><br><span class="line">&#125;</span><br><span class="line">.btn&#123;</span><br><span class="line">	position: fixed;</span><br><span class="line">	bottom: 15px;</span><br><span class="line">	padding: 0 10px;</span><br><span class="line">	font-size: 40px;</span><br><span class="line">	text-decoration: none;</span><br><span class="line">	color: white;</span><br><span class="line">	font-family: &quot;iconfont&quot;;</span><br><span class="line">	cursor: pointer;</span><br><span class="line">&#125;</span><br><span class="line">.btn:before&#123;</span><br><span class="line">	content: &#39;\e61b&#39;;</span><br><span class="line">&#125;</span><br><span class="line">.btnc:before&#123;</span><br><span class="line">	content: &#39;\e61c&#39;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>其中用到了阿里的图标库，具体的使用方法就是你先创建一个项目，把喜欢的图标加入项目，然后生成一个后缀是.css的链接，把这个链接加入到你的CSS文件中，在链接开头记得加上‘http:’；在使用图标的时候只需要在标签的class属性里这样写“  class=”icon iconfont 图标名称” ”十分便捷好用。</p>
+<p>效果图：<br><img src="https://img-blog.csdnimg.cn/20200426204621407.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0ODkyMTEx,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200426204713187.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ0ODkyMTEx,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
 
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢打赏<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/zfb.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/wx.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/26/%E5%B8%A6%E9%9A%90%E8%97%8F%E5%8A%9F%E8%83%BD%E7%9A%84%E6%92%AD%E6%94%BE%E5%99%A8%E8%8F%9C%E5%8D%95/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/24/%E7%AE%80%E5%8D%95%E7%9A%84Web%E6%B3%A8%E5%86%8C%E9%A1%B5%E9%9D%A2/" class="archive-article-date">
-  	<time datetime="2020-04-24T13:52:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-24</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/04/24/%E7%AE%80%E5%8D%95%E7%9A%84Web%E6%B3%A8%E5%86%8C%E9%A1%B5%E9%9D%A2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">简单的Web注册页面</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/24/%E7%AE%80%E5%8D%95%E7%9A%84Web%E6%B3%A8%E5%86%8C%E9%A1%B5%E9%9D%A2/">简单的Web注册页面</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/24/%E7%AE%80%E5%8D%95%E7%9A%84Web%E7%99%BB%E5%BD%95%E9%A1%B5%E9%9D%A2/" class="archive-article-date">
-  	<time datetime="2020-04-24T13:42:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/24/%E7%AE%80%E5%8D%95%E7%9A%84Web%E7%99%BB%E5%BD%95%E9%A1%B5%E9%9D%A2/">简单的Web登录页面</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -263,8 +344,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
